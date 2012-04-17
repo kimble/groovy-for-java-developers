@@ -27,10 +27,7 @@ public class TempDirUtil {
 
     private static File getSystemTmpDirectory() {
         String path = System.getProperty("java.io.tmpdir");
-        File directory = new File(path);
-        assert directory.exists() && directory.isDirectory();
-
-        return directory;
+        return new File(path);
     }
 
 }
