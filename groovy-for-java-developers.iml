@@ -26,6 +26,15 @@
     <orderEntry type="library" scope="TEST" name="spock-core-0.6-groovy-1.8" level="project" />
     <orderEntry type="library" exported="" name="asm-tree-3.2" level="project" />
     <orderEntry type="library" exported="" name="commons-io-2.2" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng-jdk15.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
