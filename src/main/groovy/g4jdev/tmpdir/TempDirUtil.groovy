@@ -4,12 +4,13 @@ import static java.util.UUID.randomUUID
 import org.apache.commons.io.FileUtils
 
 /**
- *  
+ * Creates a temporary directory, passes it to a block of code and
+ * deletes the directory with content when the code has executed.
  * @author Kim A. Betti <kim.betti@gmail.com>
  */
 public class TempDirUtil {
 
-    public static File doWithTemporaryDirectory(TempDirectoryTemplate template) throws IOException {
+    public static <T> T doWithTemporaryDirectory(TempDirectoryTemplate<T> template) throws IOException {
         File systemTemporaryDirectory = getSystemTmpDirectory();
         File temporaryDirectory = new File(systemTemporaryDirectory, randomUUID().toString());
 
