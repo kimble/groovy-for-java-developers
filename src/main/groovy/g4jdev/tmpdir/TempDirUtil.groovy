@@ -16,8 +16,6 @@ public class TempDirUtil {
 
         try {
             assert temporaryDirectory.mkdir();
-            System.out.println("Created temporary directory " + temporaryDirectory);
-
             return template.withTemporaryDirectory(temporaryDirectory)
         }
         finally {

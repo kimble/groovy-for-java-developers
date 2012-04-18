@@ -14,18 +14,13 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="asm-commons-3.2" level="project" />
-    <orderEntry type="library" exported="" name="asm-util-3.2" level="project" />
-    <orderEntry type="library" exported="" name="asm-analysis-3.2" level="project" />
-    <orderEntry type="library" exported="" name="asm-3.2" level="project" />
-    <orderEntry type="library" scope="TEST" name="groovy-all-1.8.5" level="project" />
-    <orderEntry type="library" exported="" name="groovy-1.8.6" level="project" />
+    <orderEntry type="library" exported="" name="groovy-all-1.8.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-io-2.2" level="project" />
     <orderEntry type="library" scope="TEST" name="hamcrest-core-1.2" level="project" />
-    <orderEntry type="library" exported="" name="antlr-2.7.7" level="project" />
     <orderEntry type="library" scope="TEST" name="junit-dep-4.9" level="project" />
     <orderEntry type="library" scope="TEST" name="spock-core-0.6-groovy-1.8" level="project" />
-    <orderEntry type="library" exported="" name="asm-tree-3.2" level="project" />
-    <orderEntry type="library" exported="" name="commons-io-2.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="fest-assert-1.4" level="project" />
+    <orderEntry type="library" scope="TEST" name="fest-util-1.1.6" level="project" />
   </component>
 </module>
 

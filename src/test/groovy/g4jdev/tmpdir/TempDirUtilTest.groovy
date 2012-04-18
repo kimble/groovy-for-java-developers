@@ -1,7 +1,8 @@
 package g4jdev.tmpdir
 
-import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.Test
+
+import static org.fest.assertions.Assertions.assertThat;
 
 /**
  * @author Kim A. Betti <kim.betti@gmail.com>
@@ -14,15 +15,18 @@ public class TempDirUtilTest {
 
             @Override
             public File withTemporaryDirectory(File temporaryDirectory) {
-                assertTrue("Doesn't exist", temporaryDirectory.exists());
-                assertTrue("Isn't a directory", temporaryDirectory.isDirectory());
+                assertThat(temporaryDirectory)
+                    .as("Temporary directory handed to template")
+                    .isNotNull().exists().isDirectory();
 
                 return temporaryDirectory;
             }
 
         });
 
-        assertNotNull(createdDirectory);
+        assertThat(createdDirectory)
+            .as("Temporary directory passed from template")
+            .doesNotExist();
     }
 
 }
