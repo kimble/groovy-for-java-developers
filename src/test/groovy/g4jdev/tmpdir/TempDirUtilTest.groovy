@@ -11,13 +11,15 @@ public class TempDirUtilTest {
 
     @Test
     public void shouldCreateTemporaryDirectory() {
-        File createdDirectory = TempDirUtil.doWithTemporaryDirectory(new TempDirectoryTemplate<File>() {
+        File createdDirectory = TempDirUtil.doWithTemporaryDirectory(new TempDirUtil.Template<File>() {
 
             @Override
             public File withTemporaryDirectory(File temporaryDirectory) {
                 assertThat(temporaryDirectory)
                     .as("Temporary directory handed to template")
-                    .isNotNull().exists().isDirectory();
+                    .isNotNull()
+                    .exists()
+                    .isDirectory();
 
                 return temporaryDirectory;
             }

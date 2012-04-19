@@ -10,13 +10,13 @@ import org.apache.commons.io.FileUtils
  */
 public class TempDirUtil {
 
-    public static <T> T doWithTemporaryDirectory(TempDirectoryTemplate<T> template) throws IOException {
+    public static <T> T doWithTemporaryDirectory(Template<T> template) throws IOException {
         File systemTemporaryDirectory = getSystemTmpDirectory();
         File temporaryDirectory = new File(systemTemporaryDirectory, randomUUID().toString());
 
         try {
             assert temporaryDirectory.mkdir();
-            return template.withTemporaryDirectory(temporaryDirectory)
+            return template.withTemporaryDirectory(temporaryDirectory);
         }
         finally {
             FileUtils.deleteDirectory(temporaryDirectory)
@@ -26,6 +26,12 @@ public class TempDirUtil {
     private static File getSystemTmpDirectory() {
         String path = System.getProperty("java.io.tmpdir");
         return new File(path);
+    }
+
+    public interface Template<T> {
+
+        T withTemporaryDirectory(File temporaryDirectory)
+
     }
 
 }
